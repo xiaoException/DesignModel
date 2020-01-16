@@ -5,10 +5,10 @@ package com.vul.proxy.liuchong.staticdemo.simple;
  * Description:
  * date: 2020/1/14 10:57
  */
-public class GamePlayerProxy implements VulSimpleInterface {
+public class VulSimpleProxy implements VulSimpleInterface {
     private VulSimpleInterface gamePlayer;
 
-    public GamePlayerProxy(String name) throws Exception {
+    public VulSimpleProxy(String name) throws Exception {
         gamePlayer = new VulSimple(this, name);
     }
 
@@ -24,7 +24,7 @@ public class GamePlayerProxy implements VulSimpleInterface {
     }
 
     public static void main(String[] args) throws Exception {
-        VulSimpleInterface gamePlayer = new GamePlayerProxy("张三");
+        VulSimpleInterface gamePlayer = new VulSimpleProxy("张三");
         gamePlayer.add();
         gamePlayer.update();
     }
